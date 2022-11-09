@@ -1,26 +1,19 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+@import url("satoshi.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: theme("colors.background");
+    color: theme("textColor");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+p{
+    color: theme("colors.textParagraph");
 }

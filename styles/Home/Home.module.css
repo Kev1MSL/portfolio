@@ -1,0 +1,12 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+main.content{
+    @apply w-full h-full flex flex-col items-center justify-center;
+}
+
+.section{
+    @apply container flex flex-col items-center h-screen;
+}
