@@ -11,11 +11,11 @@ export default function AboutMe() {
 	const currentYear = date.getFullYear();
 	const age = date.getMonth() >= 6 ? currentYear - 2002 : currentYear - 2003;
 	return (
-		<div className={styles.aboutMe}>
-			<h2 className={styles.aboutMeTitle}>About Me</h2>
-			<div className={styles.aboutMeContent}>
+		<div className={styles.contentContainer}>
+			<h2 className={styles.title}>About Me</h2>
+			<div className={styles.content}>
 				<div className={styles.textContainer}>
-					<p className={styles.aboutMeDescription}>
+					<p className={styles.description}>
 						Hi there! I am Kevin and I am currently a last-year bachelor student majoring in Mathematics &
 						Computer Science at l'Ecole Polytechnique (the top engineering school in France). I am {age} with
 						French and Ukrainian origins. I was born in Paris, although I have spent most of my youth in

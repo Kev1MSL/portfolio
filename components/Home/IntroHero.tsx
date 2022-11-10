@@ -14,15 +14,15 @@ export default function IntroHero(props: any) {
 	const router = useRouter();
 	return (
 		<div className={styles.hero}>
-			<div className={styles.heroWelcomeMessage}>Welcome! My name is</div>
-			<h1 className={styles.heroTitle}>Kevin Messali</h1>
-			<div className={styles.heroSubtitle}>I am a <span
-				className={styles.heroSubtitleKeyword}>Student</span> & <span
-				className={styles.heroSubtitleKeyword}>Aspiring Entrepreneur</span></div>
-			<div className={styles.heroDescription}>On this website you will find my current and past projects, some
+			<div className={styles.welcomeMessage}>Welcome! My name is</div>
+			<h1 className={styles.title}>Kevin Messali</h1>
+			<div className={styles.subtitle}>I am a <span
+				className={styles.subtitleKeyword}>Student</span> & <span
+				className={styles.subtitleKeyword}>Aspiring Entrepreneur</span></div>
+			<div className={styles.description}>On this website you will find my current and past projects, some
 				interesting information about me and my blog where I share my experiences.
 			</div>
-			<div className={styles.heroButton}><span className="mr-5">Any questions?</span><PrimaryButton
+			<div className={styles.contactButton}><span className="mr-5">Any questions?</span><PrimaryButton
 				id={"contact-me"}
 				onClick={() => {
 					// Send email

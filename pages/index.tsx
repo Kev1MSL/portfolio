@@ -12,6 +12,7 @@ import {PaperAirplaneIcon} from "@heroicons/react/24/solid";
 import IntroHero from "../components/Home/IntroHero";
 import AboutMe from "../components/Home/AboutMe";
 import Education from "../components/Home/Education/Education";
+import HighlightProjects from "../components/Home/HighlightProjects";
 
 export default function Home() {
 	return (
@@ -29,6 +30,9 @@ export default function Home() {
 				</section>
 				<section className={styles.section} id={"education"}>
 					<Education/>
+				</section>
+				<section className={styles.section} id={"highlight-projects"}>
+					<HighlightProjects/>
 				</section>
 			</main>
 		</>

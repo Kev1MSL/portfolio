@@ -9,10 +9,9 @@ import styles from "../../styles/Buttons/PrimaryButton.module.css";
 type Props = {
 	top: string;
 	left: string;
-	id?: string;
 };
 
-export const RipplePrimary: FC<Props> = ({ top, left, id }) => (
-	<span style={{ top, left }} id={`ripple-shape-${id}`} className={styles.rippleShape}></span>
+export const RipplePrimary: FC<Props> = ({ top, left}) => (
+	<span style={{ top, left }} className={styles.rippleShape}></span>
 );
 

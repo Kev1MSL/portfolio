@@ -7,28 +7,28 @@
     @apply w-2/3 mt-36;
 }
 
-.heroWelcomeMessage{
+.welcomeMessage{
     @apply text-2xl font-medium;
 }
 
-.heroTitle{
+.title{
     @apply text-7xl font-extra-bold font-display mt-5 ml-3;
     color: theme("colors.textAccent");
 }
 
-.heroSubtitle{
+.subtitle{
     @apply text-5xl font-bold mt-7 ml-3;
 }
 
-.heroSubtitleKeyword{
+.subtitleKeyword{
     color: theme("colors.textAccentSecondary");
 }
 
-.heroButton{
+.contactButton{
     @apply mt-20 ml-8 flex flex-row items-center justify-center;
 }
 
-.heroDescription {
+.description {
     @apply text-xl font-medium mt-10 ml-3;
 }
 

@@ -3,15 +3,15 @@
  *
  */
 
-.aboutMe{
+.contentContainer{
     @apply container flex flex-col items-center;
 }
 
-.aboutMeTitle{
+.title{
     @apply text-5xl font-bold mt-10 font-display relative;
 }
 
-.aboutMeContent{
+.content{
     @apply grid grid-cols-2 gap-10 mt-10 justify-items-center;
 }
 
@@ -45,10 +45,10 @@
     color: theme("colors.textAccentSecondary");
 }
 
-.aboutMeDescription{
+.description{
 }
 
-.aboutMeTitle::before {
+.title::before {
     content: "";
     position: absolute;
     left: 35%;

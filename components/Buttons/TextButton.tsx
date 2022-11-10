@@ -4,8 +4,6 @@
  */
 
 import styles from "../../styles/Buttons/TextButton.module.css";
-import {createRoot} from "react-dom/client";
-import {RipplePrimary} from "./RipplePrimary";
 import React from "react";
 import {RippleTextButton} from "./RippleTextButton";
 
@@ -17,27 +15,32 @@ export type TextButtonProps = {
 }
 
 export default function TextButton( props: TextButtonProps ) {
-	const handleClick = (e:any) => {
-		if (!document.getElementById(`ripple-shape-${props.id}`)) {
-			props.onClick && props.onClick();
-			const btn: HTMLButtonElement = e?.currentTarget;
-			const rect: DOMRect = btn.getBoundingClientRect();
-			const top = `${e.clientY - rect.y}px`;
-			const left = `${e.clientX - rect.x}px`;
-			const container = createRoot(
-				document.getElementById(`ripple-${props.id}`)!
-			);
-			container.render(<RippleTextButton top={top} left={left} id={props.id} />);
+	const [isRippling, setIsRippling] = React.useState(false);
+	const [coords, setCoords] = React.useState({ x: "-1px", y: "-1px" });
+	React.useEffect(() => {
+		if (coords.x !== "-1px" && coords.y !== "-1px") {
+			setIsRippling(true);
+			setTimeout(() => setIsRippling(false), 500);
+		} else setIsRippling(false);
+	}, [coords]);
 
-			setTimeout(() => {
-				container.unmount();
-			}, 500);
-		}
+	React.useEffect(() => {
+		if (!isRippling) setCoords({ x: "-1px", y: "-1px" });
+	}, [isRippling]);
+
+
+	const handleClick = (e:any) => {
+		props.onClick && props.onClick();
+		const btn: HTMLButtonElement = e?.currentTarget;
+		const rect: DOMRect = btn.getBoundingClientRect();
+		const top = `${e.clientY - rect.y}px`;
+		const left = `${e.clientX - rect.x}px`;
+		setCoords({ x: left, y: top });
 	};
 	return (
 		<button className={`${styles.textButton} ${props.className}`} onClick={handleClick}>
 			<span className={styles.content}>{props.title}</span>
-			<span id={`ripple-${props.id}`}></span>
+			{isRippling && <RippleTextButton top={coords.y} left={coords.x}/>}
 		</button>
 	);
 }
