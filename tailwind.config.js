@@ -11,11 +11,13 @@ module.exports = {
       primary: "#B030B0",
       primaryHover: "#8B008B",
       secondary: "#602080",
-      container: "#202060",
+      container: "#272775",
+      containerSecondary: "#202060",
       background: "#202040",
       textAccent: "#84ebff",
       textAccentSecondary: "#f3a6ff",
       textParagraph: "#dfdfe8",
+      textButtonRipple: "#4199c9"
 
     },
     backgroundColor: "#202040",

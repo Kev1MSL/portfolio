@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+.card {
+    @apply flex flex-col items-center justify-center rounded-xl shadow-2xl p-5;
+    background-color: theme("colors.container");
+}
+
+.cardContent {
+    @apply w-full;
+}

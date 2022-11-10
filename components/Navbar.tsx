@@ -42,7 +42,7 @@ export default function Navbar(){
                 {isActive("/blog") ? <ul className={styles.navbarRight}>
                     <li className={styles.navbarLoginItem}>
                         <Link href={"/login"} className={styles.navbarLogin}>
-                            <PrimaryButton title={"Login"} icon={<ChevronRightIcon className="w-6 h-6"/>}/>
+                            <PrimaryButton id={"login"} title={"Login"} icon={<ChevronRightIcon className="w-6 h-6"/>}/>
                         </Link>
 
                     </li>

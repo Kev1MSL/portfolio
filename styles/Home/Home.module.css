@@ -7,6 +7,10 @@ main.content{
     @apply w-full h-full flex flex-col items-center justify-center;
 }
 
-.section{
+.introSection{
     @apply container flex flex-col items-center h-screen;
+}
+
+.section{
+    @apply container flex flex-col items-center mb-28;
 }

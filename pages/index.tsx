@@ -11,6 +11,7 @@ import PrimaryButton from "../components/Buttons/PrimaryButton";
 import {PaperAirplaneIcon} from "@heroicons/react/24/solid";
 import IntroHero from "../components/Home/IntroHero";
 import AboutMe from "../components/Home/AboutMe";
+import Education from "../components/Home/Education/Education";
 
 export default function Home() {
 	return (
@@ -20,13 +21,14 @@ export default function Home() {
 			</Head>
 			<Navbar/>
 			<main className={styles.content}>
-				<section className={`${styles.section} border-b`} id={"intro-hero"}>
-					<IntroHero welcomeMessage={"Welcome! My name is"} name={"Kevin Messali"} keyword1={"Student"}
-					           keyword2={"Aspiring Entrepreneur"}
-					           description={"On this website you will find my current and past projects, some interesting information about me and my blog where I share my experiences."}/>
+				<section className={`${styles.introSection} border-b`} id={"intro-hero"}>
+					<IntroHero/>
 				</section>
 				<section className={styles.section} id={"about-me"}>
 					<AboutMe/>
+				</section>
+				<section className={styles.section} id={"education"}>
+					<Education/>
 				</section>
 			</main>
 		</>

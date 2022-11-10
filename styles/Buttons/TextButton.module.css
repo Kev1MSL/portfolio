@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+@keyframes ripple {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+    35% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 3.25;
+    }
+}
+
+.rippleShape {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin-top: -40px;
+    margin-left: -40px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    background: theme("colors.textButtonRipple");
+    animation: ripple 0.9s both;
+}
+
+.textButton {
+    @apply flex flex-row items-center justify-around h-10 px-4 py-2 rounded-lg
+    cursor-pointer font-medium overflow-hidden relative;
+}
+
+.textButton > .content {
+    @apply relative z-[2] px-3;
+    color: theme("colors.textAccent");
+}
