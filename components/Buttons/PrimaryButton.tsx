@@ -4,7 +4,6 @@
  */
 import styles from "../../styles/Buttons/PrimaryButton.module.css";
 import React from "react";
-import {createRoot} from "react-dom/client";
 import {RipplePrimary} from "./RipplePrimary";
 
 
@@ -13,7 +12,6 @@ export type PrimaryButtonProps = {
 	className?: string,
 	icon?: JSX.Element,
 	onClick?: () => void,
-	id: string
 }
 
 export default function PrimaryButton(props: PrimaryButtonProps) {
@@ -42,7 +40,6 @@ export default function PrimaryButton(props: PrimaryButtonProps) {
 	return (
 		<button onClick={handleClick} className={`${styles.primaryButton} ${props.className}`}>
 			<span className={styles.content}>{props.title}</span>{props.icon}
-			{/*<span id={`ripple-${props.id}`}></span>*/}
 			{isRippling && <RipplePrimary top={coords.y} left={coords.x}/>}
 		</button>
 

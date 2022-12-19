@@ -16,11 +16,11 @@ export default function Education() {
 	};
 	const universityDetails: TimelineAdditionalDetailsProps = {
 		courses: "Followed intense coursework in mathematics (analysis & algebra), computer science (data structures & algorithms, computer architecture, machine learning, networks, object-oriented programming, etc.)",
-		activities: "IEEE student branch vice-president, editor at the bachelor's newspaper, bachelor representative at the Binet Réseau (IT society), organizer of the mental health week",
+		activities: "IEEE student branch vice-president, editor at the bachelor's newspaper, bachelor representative at the Binet Réseau (IT society), organizer of the mental health awareness week",
 		achievements: "Co-created the bachelor's blog (horizon.bxplus.co), co-developed the bachelor's app to track homeworks, school events, schedule, etc."
 	};
 	const exchangeDetails: TimelineAdditionalDetailsProps = {
-		courses: "probability, data mining, computer vision, strategic management and investment",
+		courses: "Probability, data mining, computer vision, strategic management and investment",
 	};
 	return (
 		<div className={styles.contentContainer}>

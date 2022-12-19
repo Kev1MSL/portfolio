@@ -17,7 +17,8 @@ module.exports = {
       textAccent: "#84ebff",
       textAccentSecondary: "#f3a6ff",
       textParagraph: "#dfdfe8",
-      textButtonRipple: "#4199c9"
+      textButtonRipple: "#4199c9",
+      border: "#5656a6"
 
     },
     backgroundColor: "#202040",

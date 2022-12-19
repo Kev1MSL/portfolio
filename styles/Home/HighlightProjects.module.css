@@ -4,14 +4,14 @@
  */
 
 .contentContainer {
-  @apply flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center;
 }
 
 .title {
-  @apply text-5xl font-bold font-display relative;
+    @apply text-5xl font-bold font-display relative;
 }
 
-.title::before{
+.title::before {
     content: "";
     position: absolute;
     left: 42%;
@@ -24,6 +24,92 @@
     opacity: 70%;
 }
 
-.content{
-    @apply mt-10 items-center justify-center grid grid-cols-2 gap-10;
+.content {
+    @apply mt-20 grid grid-cols-2 justify-items-center gap-4;
+}
+
+.technicalInfo {
+    @apply mt-14;
+}
+
+.technicalInfoTitle {
+    @apply text-2xl font-bold font-display text-center;
+}
+
+.techStackList {
+    @apply grid grid-cols-4 gap-4 mt-7;
+}
+
+.techStackItem {
+    @apply flex flex-row items-center;
+}
+
+.techStackItemIcon {
+    @apply w-5 h-5 mr-2;
+}
+
+.projectListContainer {
+    @apply grid grid-cols-2 gap-10 mt-10 justify-items-center;
+}
+
+.featuredProjectContainer {
+    @apply w-[42rem] hover:-translate-y-2 transition-all duration-300 ease-in-out;
+}
+
+.featuredProjectTitle {
+    @apply text-2xl font-bold font-display text-center mt-4;
+}
+
+.featuredProjectDescription {
+    @apply text-center mt-4;
+}
+
+.featuredProjectTechStack {
+    @apply flex flex-row items-center justify-center gap-2 font-medium;
+}
+
+.featuredProjectTechStackItem {
+    @apply px-3 py-2 rounded-lg;
+    background-color: theme("colors.containerSecondary");
+}
+
+.featuredProject {
+    @apply flex flex-row items-center justify-center relative;
+}
+
+.pill {
+    @apply absolute top-0 right-0;
+}
+
+.featuredProjectContent {
+    @apply flex flex-col justify-between py-5 mx-auto px-5;
+}
+
+.featuredProjectLinks {
+    @apply flex flex-row justify-center gap-4 mt-5;
+}
+
+.featuredProjectLink {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.featuredProjectLink:hover {
+    @apply transition-all duration-300 ease-in-out;
+    color: theme("colors.textAccent");
+}
+
+.techStackContainer {
+    @apply flex flex-row items-center justify-center gap-2 mt-6;
+}
+
+.featuredProjectImageContainer {
+    @apply h-full w-52 min-w-[10rem];
+}
+
+.featuredProjectImage {
+    @apply rounded-xl;
+}
+
+.seeMoreProjects {
+    @apply mt-20 flex flex-row items-center justify-center;
 }

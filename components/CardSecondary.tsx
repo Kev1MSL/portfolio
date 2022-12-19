@@ -3,14 +3,14 @@
  *
  */
 
-import styles from "../styles/Card.module.css";
+import styles from "../styles/CardSecondary.module.css";
 
 export type CardProps = {
 	className?: string,
 	children: JSX.Element | JSX.Element[]
 }
 
-export default function Card( props: CardProps ) {
+export default function CardSecondary( props: CardProps ) {
 	return(
 		<div className={`${styles.container} ${props.className}`}>
 			<div className={styles.content}>

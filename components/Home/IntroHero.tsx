@@ -10,7 +10,7 @@ import React from "react";
 import {Link} from 'react-scroll'
 import {useRouter} from "next/router";
 
-export default function IntroHero(props: any) {
+export default function IntroHero() {
 	const router = useRouter();
 	return (
 		<div className={styles.hero}>
@@ -23,10 +23,9 @@ export default function IntroHero(props: any) {
 				interesting information about me and my blog where I share my experiences.
 			</div>
 			<div className={styles.contactButton}><span className="mr-5">Any questions?</span><PrimaryButton
-				id={"contact-me"}
 				onClick={() => {
 					// Send email
-					router.push("mailto:kevinmessali06@gmail.com");
+					router.push("mailto:kevinmessali.pro@gmail.com");
 				}} title="Let's get in touch" icon={<PaperAirplaneIcon className="w-5 h-5"/>}/></div>
 			<Link className={styles.scrollNext} to={"about-me"} smooth={true} offset={-70}>
 				<div className={styles.mousey}>

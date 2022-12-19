@@ -4,8 +4,9 @@
  */
 
 .container {
-    @apply rounded-xl shadow-2xl p-5;
-    background-color: theme("colors.container");
+    @apply rounded-xl p-5 border-[3px];
+    border-color: theme("colors.border");
+
 }
 
 .content {

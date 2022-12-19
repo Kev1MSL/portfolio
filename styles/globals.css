@@ -8,15 +8,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: theme("colors.background");
     color: theme("textColor");
 }
 
-p{
+::-moz-selection { /* Code for Firefox */
+    background: rgba(41, 233, 255, 0.3);
+}
+
+::selection {
+    background: rgba(41, 233, 255, 0.3);
+}
+
+p {
     color: theme("colors.textParagraph");
 }

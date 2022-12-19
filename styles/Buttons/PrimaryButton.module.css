@@ -33,7 +33,7 @@
 }
 
 .primaryButton{
-    @apply flex flex-row items-center justify-around h-10 px-4 py-2 rounded-full hover:scale-[1.015]
+    @apply flex flex-row items-center justify-around h-10 px-4 py-2 rounded-full
     transition-transform duration-300 ease-in-out cursor-pointer font-medium overflow-hidden relative;
     background-color: theme("colors.primary");
 }

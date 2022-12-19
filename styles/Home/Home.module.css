@@ -12,5 +12,5 @@ main.content{
 }
 
 .section{
-    @apply container flex flex-col items-center mb-28;
+    @apply container flex flex-col items-center mb-28 px-10;
 }
