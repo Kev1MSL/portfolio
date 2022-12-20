@@ -8,24 +8,22 @@
 }
 
 .title {
-    @apply text-5xl font-bold font-display relative;
+    @apply text-4xl md:text-5xl font-bold font-display relative text-center;
 }
 
 .title::before {
+    @apply h-2.5 md:h-3.5 -bottom-3 md:-bottom-5 w-[13rem] md:w-[28rem];
     content: "";
     position: absolute;
     left: 42%;
-    bottom: -15px;
     z-index: -1;
-    width: 450px;
-    height: 14px;
     transform: skew(-12deg) translateX(-50%);
     background: theme("colors.secondary");
     opacity: 70%;
 }
 
 .content {
-    @apply mt-20 grid grid-cols-2 justify-items-center gap-4;
+    @apply mt-20 grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-4;
 }
 
 .technicalInfo {
@@ -37,7 +35,7 @@
 }
 
 .techStackList {
-    @apply grid grid-cols-4 gap-4 mt-7;
+    @apply grid grid-cols-2 md:grid-cols-4 gap-4 mt-7;
 }
 
 .techStackItem {
@@ -49,11 +47,11 @@
 }
 
 .projectListContainer {
-    @apply grid grid-cols-2 gap-10 mt-10 justify-items-center;
+    @apply grid grid-cols-1 2xl:grid-cols-2 gap-10 mt-10 justify-items-center;
 }
 
 .featuredProjectContainer {
-    @apply w-[42rem] hover:-translate-y-2 transition-all duration-300 ease-in-out;
+    @apply w-full lg:w-[39rem] xl:w-[42rem] hover:-translate-y-2 transition-all duration-300 ease-in-out;
 }
 
 .featuredProjectTitle {
@@ -65,7 +63,7 @@
 }
 
 .featuredProjectTechStack {
-    @apply flex flex-row items-center justify-center gap-2 font-medium;
+    @apply grid grid-cols-2 md:flex md:flex-row items-center justify-center gap-2 font-medium;
 }
 
 .featuredProjectTechStackItem {
@@ -103,13 +101,13 @@
 }
 
 .featuredProjectImageContainer {
-    @apply h-full w-52 min-w-[10rem];
+    @apply h-full w-24 xl:w-48 min-w-[10rem] hidden lg:block;
 }
 
 .featuredProjectImage {
-    @apply rounded-xl;
+    @apply rounded-xl w-full xl:w-3/4;
 }
 
 .seeMoreProjects {
-    @apply mt-20 flex flex-row items-center justify-center;
+    @apply mt-20 flex flex-col md:flex-row items-center justify-center gap-4;
 }

@@ -27,7 +27,7 @@ export default function Project() {
                 techStack: ["Next.js", "TailwindCSS", ".NET Core", "TypeScript"],
                 type: ProjectType.Personal,
                 links: {
-                    github: "link to github",
+                    github: "https://github.com/Kev1MSL/portfolio",
                     website: "https://www.kevinmessali.com",
                 },
             },

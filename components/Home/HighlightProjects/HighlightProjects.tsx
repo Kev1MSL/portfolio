@@ -73,7 +73,7 @@ export default function HighlightProjects() {
                             image={"logo/logo.png"}
                             techStack={["Next.js", "TailwindCSS", ".NET Core", "TypeScript"]}
                             links={{
-                                github: "link to github",
+                                github: "https://github.com/Kev1MSL/portfolio",
                                 website: "https://www.kevinmessali.com",
                             }}
                         />

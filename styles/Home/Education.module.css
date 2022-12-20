@@ -3,110 +3,108 @@
  *
  */
 
-.contentContainer{
+.contentContainer {
     @apply flex flex-col items-center justify-center;
 }
 
-.title{
-    @apply text-5xl font-bold mt-10 font-display relative;
+.title {
+    @apply text-4xl md:text-5xl md:text-5xl font-bold mt-10 font-display relative;
 }
 
-.title::before{
+.title::before {
+    @apply h-2.5 md:h-3.5 -bottom-3 md:-bottom-5 w-[14rem] md:w-[18rem];
     content: "";
     position: absolute;
     left: 42%;
-    bottom: -15px;
     z-index: -1;
-    width: 320px;
-    height: 14px;
     transform: skew(-12deg) translateX(-50%);
     background: theme("colors.secondary");
     opacity: 70%;
 }
 
-.content{
+.content {
     @apply mt-10 flex flex-col items-center justify-center gap-5;
 }
 
-.contentIntro{
-    @apply text-center w-11/12;
+.contentIntro {
+    @apply text-left lg:text-center w-11/12;
 }
 
-.timeline{
+.timeline {
     @apply flex flex-col items-center;
 }
 
-.timelineItem{
-    @apply my-5;
+.timelineItem {
+    @apply my-5 w-full;
 }
 
-.timelineItemContent{
-    @apply w-[35rem] flex flex-col items-center justify-center;
-
+.timelineItemContent {
+    @apply w-auto md:w-[35rem] flex flex-col items-center justify-center;
 }
 
-.timelineItemContentExpanded{
-    @apply w-[35rem] flex flex-col;
-
+.timelineItemContentExpanded {
+    @apply w-auto md:w-[35rem] flex flex-col;
 }
 
-.date{
+.date {
     @apply flex flex-row items-center justify-center rounded-lg shadow-2xl px-3 py-2;
     background-color: theme("colors.containerSecondary");
 }
 
-.location{
+.location {
     @apply font-medium flex flex-row items-center;
 }
 
-.locationIcon{
+.locationIcon {
     @apply w-5 h-5 mr-1;
 }
 
-.timelineItemLocDate{
+.timelineItemLocDate {
     @apply flex flex-row items-center justify-between;
 }
 
-.timelineItemDetails{
+.timelineItemDetails {
     @apply flex flex-col items-center mt-3;
 }
 
-.school{
+.school {
     @apply text-lg font-bold font-display mb-1;
 }
 
-.degree{
+.degree {
     @apply flex flex-row items-center;
 }
 
 .degreeIcon {
-    @apply w-6 h-6 mr-2;
+    @apply min-w-[1.5rem] min-h-[1.5rem] w-6 h-6 mr-2;
 }
 
-.viewMore{
+.viewMore {
     @apply px-3 py-2 mt-5;
 }
 
-.viewLess{
+.viewLess {
     @apply px-3 py-2 mt-5;
 }
 
-.timelineAdditionalDetails{
+.timelineAdditionalDetails {
     @apply flex flex-col items-center mt-5 border-t-2 pt-5 gap-3 px-3;
 }
 
-.grade{
+.grade {
     @apply flex flex-row items-center;
 }
 
-.activities, .achievements, .courses{
+.activities,
+.achievements,
+.courses {
     @apply flex flex-row;
 }
 
-.detailIcon{
+.detailIcon {
     @apply w-3 h-3 mr-2 min-w-[1.25rem] min-h-[1.25rem];
 }
 
-.detailContent{
+.detailContent {
     @apply text-sm;
 }

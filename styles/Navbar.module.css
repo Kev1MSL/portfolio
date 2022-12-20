@@ -2,40 +2,40 @@
  * Copyright (c) 2022. Kevin Messali, all rights reserved.
  *
  */
-.navbar{
+.navbar {
     @apply sticky top-0 z-50 flex flex-row w-full h-16 px-4 py-2 shadow-lg mb-4;
     background-color: theme("colors.container");
 }
 
-.navbarContent{
+.navbarContent {
     @apply w-full relative flex flex-row items-center;
 }
 
-.navbarList{
+.navbarList {
     @apply flex flex-row items-center justify-center w-full h-full absolute space-x-8;
 }
 
-.navbarRight{
-    @apply flex flex-row items-center justify-center h-full absolute right-5 space-x-8;
+.navbarRight {
+    @apply flex-row items-center justify-center h-full absolute right-5 space-x-8 hidden md:flex;
 }
 
-.navbarLogo{
+.navbarLogo {
     @apply flex flex-row items-center justify-center h-full;
 }
 
-.navbarLogoImage{
+.navbarLogoImage {
     @apply w-10 h-10 ml-5;
 }
 
-.navbarItem{
+.navbarItem {
     @apply font-medium inline-block relative;
 }
 
-.selected{
+.selected {
     @apply font-bold;
 }
 
-.navbarItem::after{
+.navbarItem::after {
     @apply absolute w-full h-0.5 -bottom-0.5 left-0;
     content: "";
     transform: scaleX(0);
@@ -44,7 +44,7 @@
     transition: transform 0.25s ease-out;
 }
 
-.navbarItem:hover::after{
+.navbarItem:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

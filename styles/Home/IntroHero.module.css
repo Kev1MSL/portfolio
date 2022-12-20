@@ -3,40 +3,41 @@
  *
  */
 
-.hero{
-    @apply w-2/3 mt-36;
+.hero {
+    @apply w-2/3 mt-14 lg:mt-36;
 }
 
-.welcomeMessage{
-    @apply text-2xl font-medium;
+.welcomeMessage {
+    @apply text-lg md:text-2xl font-medium;
 }
 
-.title{
-    @apply text-7xl font-extra-bold font-display mt-5 ml-3;
+.title {
+    @apply text-4xl md:text-7xl font-extra-bold font-display mt-5 ml-3;
     color: theme("colors.textAccent");
 }
 
-.subtitle{
-    @apply text-5xl font-bold mt-7 ml-3;
+.subtitle {
+    @apply text-xl md:text-5xl font-bold mt-7 ml-3;
 }
 
-.subtitleKeyword{
+.subtitleKeyword {
     color: theme("colors.textAccentSecondary");
 }
 
-.contactButton{
-    @apply mt-20 ml-8 flex flex-row items-center justify-center;
+.contactButton {
+    @apply mt-20 ml-0 md:ml-8 flex flex-col gap-4 md:flex-row items-center justify-center text-sm md:text-base;
 }
 
 .description {
-    @apply text-xl font-medium mt-10 ml-3;
+    @apply text-base md:text-xl font-medium mt-10 ml-3;
 }
 
-.scrollNext{
+.scrollNext {
     @apply absolute bottom-0 left-0 right-0 m-auto w-full flex flex-row items-center justify-center mb-10 cursor-pointer;
-    width :34px;
+    width: 34px;
     height: 55px;
 }
+
 .mousey {
     width: 3px;
     padding: 10px 15px;
@@ -46,6 +47,7 @@
     opacity: 0.75;
     box-sizing: content-box;
 }
+
 .scroller {
     width: 3px;
     height: 10px;
@@ -53,11 +55,20 @@
     background-color: #fff;
     animation-name: scroll;
     animation-duration: 2.2s;
-    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
     animation-iteration-count: infinite;
 }
+
 @keyframes scroll {
-    0% { opacity: 0; }
-    10% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(15px); opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
 }
