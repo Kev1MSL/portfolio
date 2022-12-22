@@ -4,7 +4,7 @@
  */
 
 .container {
-    @apply h-full flex-col fixed bottom-0 left-0 items-center gap-4 pb-5 md:w-16 lg:w-24 hidden md:flex;
+    @apply h-full flex-col fixed bottom-0 left-0 items-center gap-4 pb-5 md:w-16 lg:w-24 hidden md:flex z-50;
 }
 
 .email {
