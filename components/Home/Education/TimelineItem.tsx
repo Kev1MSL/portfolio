@@ -6,15 +6,17 @@
 import styles from "../../../styles/Home/Education.module.css";
 import Card from "../../Card";
 import TextButton from "../../Buttons/TextButton";
-import {MapPinIcon} from "@heroicons/react/24/outline";
-import {AcademicCapIcon} from "@heroicons/react/24/solid";
-import {useEffect, useState} from "react";
-import TimelineAdditionalDetails, {TimelineAdditionalDetailsProps} from "./TimelineAdditionalDetails";
+import { MapPinIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState } from "react";
+import TimelineAdditionalDetails, { TimelineAdditionalDetailsProps } from "./TimelineAdditionalDetails";
 import AnimateHeight from "react-animate-height";
 
 export type TimelineItemProps = {
     date: string;
+    dateSmall: string;
     location: string;
+    locationSmall: string;
     school: string;
     degree: string;
     details?: TimelineAdditionalDetailsProps;
@@ -51,17 +53,20 @@ export function useWindowDimensions() {
 
 export default function TimelineItem(props: TimelineItemProps) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const { width } = useWindowDimensions();
-    let isMobile: boolean = width < 768;
-    let height: number = isMobile ? 200 : 168;
+    useEffect(() => {
+        setIsMobile(width < 768);
+    }, [width]);
+    let height: number = isMobile ? 220 : 168;
 
     return (
         <Card className={isExpanded ? styles.timelineItemContentExpanded : styles.timelineItemContent}>
             <AnimateHeight height={isExpanded ? "auto" : height} animateOpacity={true}>
                 <div className={styles.timelineItemLocDate}>
-                    <span className={styles.date}>{props.date}</span>
+                    <span className={styles.date}>{isMobile ? props.dateSmall : props.date}</span>
                     <span className={styles.location}>
-                        <MapPinIcon className={styles.locationIcon} /> {props.location}
+                        <MapPinIcon className={styles.locationIcon} /> {isMobile ? props.locationSmall : props.location}
                     </span>
                 </div>
                 <div className={styles.timelineItemDetails}>
@@ -70,14 +75,14 @@ export default function TimelineItem(props: TimelineItemProps) {
                         <AcademicCapIcon className={styles.degreeIcon} /> {props.degree}
                     </p>
                     {isExpanded && <TimelineAdditionalDetails {...props.details} />}
-                    <TextButton
-                        id={`${props.school}-viewmore`}
-                        title={isExpanded ? "View less" : "View more"}
-                        className={isExpanded ? styles.viewLess : styles.viewMore}
-                        onClick={() => {
-                            setIsExpanded(!isExpanded);
-                        }}
-                    />
+                    <div className={isExpanded ? styles.viewLess : styles.viewMore}>
+                        <TextButton
+                            title={isExpanded ? "View less" : "View more"}
+                            onClick={() => {
+                                setIsExpanded(!isExpanded);
+                            }}
+                        />
+                    </div>
                 </div>
             </AnimateHeight>
         </Card>

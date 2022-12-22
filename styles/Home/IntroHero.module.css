@@ -4,7 +4,7 @@
  */
 
 .hero {
-    @apply w-2/3 mt-14 lg:mt-36;
+    @apply w-2/3 mt-10 md:mt-14 lg:mt-36;
 }
 
 .welcomeMessage {
@@ -33,9 +33,15 @@
 }
 
 .scrollNext {
-    @apply absolute bottom-0 left-0 right-0 m-auto w-full flex flex-row items-center justify-center mb-10 cursor-pointer;
-    width: 34px;
-    height: 55px;
+    display: none;
+}
+
+@media (min-height: 840px) {
+    .scrollNext {
+        @apply absolute bottom-10 left-0 right-0 m-auto w-full flex flex-row items-center justify-center cursor-pointer;
+        width: 34px;
+        height: 55px;
+    }
 }
 
 .mousey {

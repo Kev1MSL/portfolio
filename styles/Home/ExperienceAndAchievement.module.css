@@ -50,7 +50,7 @@
 }
 
 .viewMore {
-    @apply px-3 py-2 mt-5;
+    @apply px-3 py-2 absolute bottom-4;
 }
 
 .viewLess {
@@ -58,7 +58,7 @@
 }
 
 .experienceItemContent {
-    @apply w-full md:w-[36rem] flex flex-col items-center justify-center h-[15rem] md:h-52;
+    @apply w-full md:w-[36rem] flex flex-col items-center justify-center h-[16.5rem] md:h-56 relative;
 }
 
 .experienceItemContentExpanded {
@@ -75,7 +75,7 @@
 }
 
 .experienceItemDetails {
-    @apply flex flex-col items-center mt-3;
+    @apply flex flex-col items-center mt-5;
 }
 
 .experienceItemTitle {
@@ -83,7 +83,7 @@
 }
 
 .experienceItemCompany {
-    @apply flex flex-row items-center text-center;
+    @apply flex flex-row items-center text-center mt-2;
 }
 
 .detailIcon {

@@ -4,7 +4,7 @@
  */
 
 import styles from "../../../styles/Home/ExperienceAndAchievement.module.css";
-import Experience, {ExperienceProps} from "./Experience";
+import Experience, { ExperienceProps } from "./Experience";
 
 export default function ExperiencesAndAchievements() {
     const experiences: ExperienceProps[] = [
@@ -14,7 +14,7 @@ export default function ExperiencesAndAchievements() {
             location: "Ghent, Belgium",
             locationSmall: "Ghent, BE",
             date: "February 2022 - Present",
-            dateSmall: "Feb 2022 - Present",
+            dateSmall: "Feb '22 - Present",
             description: [
                 "Co-founded Creofin, a fintech startup that aims to digitalize the financial services in the farming industry - Buy Now, Pay After Harvest payment solution",
             ],
@@ -25,7 +25,7 @@ export default function ExperiencesAndAchievements() {
             location: "Ollioules, France",
             locationSmall: "Ollioules, FR",
             date: "June 2022 - August 2022",
-            dateSmall: "Jun 2022 - Aug 2022",
+            dateSmall: "Jun '22 - Aug '22",
             description: [
                 "Discovered processor enclaves, a hardware security layer to run programs securely on platforms that might be corrupted.",
                 "Delivered presentations to exhibit the need of such technology but also the limitations (attacks and countermeasures).",
@@ -38,7 +38,7 @@ export default function ExperiencesAndAchievements() {
             location: "Online",
             locationSmall: "Online",
             date: "January 2022 - April 2022",
-            dateSmall: "Jan 2022 - Apr 2022",
+            dateSmall: "Jan '22 - Apr '22",
             description: [
                 "Selected among 500+ students from top universities to participate to the challenge and was awarded $10k to launch a project.",
                 "Won the Fintech vertical at the Olam Ventures competition - Prize $25k.",
@@ -50,7 +50,7 @@ export default function ExperiencesAndAchievements() {
             location: "Cannes, France",
             locationSmall: "Cannes, FR",
             date: "November 2017- June 2018",
-            dateSmall: "Nov 2017 - Jun 2018",
+            dateSmall: "Nov '17 - Jun '18",
             description: [
                 "Supervised a team of 6 people to build the pitch of the product as Sales Manager.",
                 "Assisted the development of the computer software and the mobile application.",
@@ -80,6 +80,7 @@ export default function ExperiencesAndAchievements() {
                     More information on my{" "}
                     <a
                         className={styles.linkToLinkedIn}
+                        rel="noreferrer"
                         href={"https://www.linkedin.com/in/kevin-messali/details/experience/"}
                         target={"_blank"}
                     >
