@@ -32,17 +32,18 @@
     animation: ripple 0.9s both;
 }
 
-.primaryButton{
+.primaryButton {
     @apply flex flex-row items-center justify-around h-10 px-4 py-2 rounded-full
     transition-transform duration-300 ease-in-out cursor-pointer font-medium overflow-hidden relative;
     background-color: theme("colors.primary");
+    color: theme("textColor");
 }
 
 .primaryButton > .content {
     @apply relative z-[2] px-3;
 }
 
-.primaryButton:hover{
+.primaryButton:hover {
     background-color: theme("colors.primaryHover");
     transition: background-color 0.2s ease-in-out;
 }
