@@ -18,10 +18,16 @@ export default function Blog() {
     const [value, setValue] = useState<any>("**Hello world!!!**");
     return (
         <div className={styles.container}>
+            <style jsx global>{`
+                body {
+                    background-color: #f5f5f5;
+                    color: #0d1117;
+                }
+            `}</style>
             <Head>
                 <title>Blog | Kevin Messali</title>
             </Head>
-            <Navbar />
+            <Navbar isBlog={true} />
             <main className={styles.content}>
                 <div className={"text-center mt-10"}>Currently in development.</div>
             </main>

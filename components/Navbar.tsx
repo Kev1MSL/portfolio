@@ -10,7 +10,7 @@ import {useRouter} from "next/router";
 import PrimaryButton from "./Buttons/PrimaryButton";
 import {ChevronRightIcon} from "@heroicons/react/20/solid";
 
-export default function Navbar() {
+export default function Navbar({ isBlog = false }: { isBlog: boolean }) {
     const router = useRouter();
 
     function isActive(path: string) {
@@ -18,7 +18,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav className={styles.navbar}>
+        <nav className={isBlog ? styles.navbarBlog : styles.navbar}>
             <div className={styles.navbarLogo}>
                 <Link href={"/"} className={styles.navbarLogoLink}>
                     <img src={"/logo/logo.png"} alt={"Logo"} className={styles.navbarLogoImage} />
@@ -26,17 +26,29 @@ export default function Navbar() {
             </div>
             <div className={styles.navbarContent}>
                 <ul className={styles.navbarList}>
-                    <li className={`${styles.navbarItem} ${isActive("/") ? styles.selected : ""}`}>
+                    <li
+                        className={`${styles.navbarItem} ${isBlog ? styles.navbarItemLight : styles.navbarItemDark} ${
+                            isActive("/") ? styles.selected : ""
+                        }`}
+                    >
                         <Link href={"/"} className={styles.navbarItemLink}>
                             Home
                         </Link>
                     </li>
-                    <li className={`${styles.navbarItem} ${isActive("/projects") ? styles.selected : ""}`}>
+                    <li
+                        className={`${styles.navbarItem} ${isBlog ? styles.navbarItemLight : styles.navbarItemDark} ${
+                            isActive("/projects") ? styles.selected : ""
+                        }`}
+                    >
                         <Link href={"/projects"} className={styles.navbarItemLink}>
                             Projects
                         </Link>
                     </li>
-                    <li className={`${styles.navbarItem} ${isActive("/blog") ? styles.selected : ""}`}>
+                    <li
+                        className={`${styles.navbarItem} ${isBlog ? styles.navbarItemLight : styles.navbarItemDark} ${
+                            isActive("/blog") ? styles.selected : ""
+                        }`}
+                    >
                         <Link href={"/blog"} className={styles.navbarItemLink}>
                             Blog
                         </Link>

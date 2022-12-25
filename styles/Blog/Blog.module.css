@@ -3,14 +3,14 @@
  *
  */
 
-.container {
-    background-color: #f3f3f0;
-    @apply min-h-screen;
-}
+/*.container {*/
+/*    background-color: #f3f3f0;*/
+/*    @apply min-h-screen;*/
+/*}*/
 
-main.content {
-    color: #0d1117;
-}
+/*main.content {*/
+/*    color: #0d1117;*/
+/*}*/
 
 @media (prefers-color-scheme: dark) {
     .wmdeMarkdown,

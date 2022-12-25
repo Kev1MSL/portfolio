@@ -7,6 +7,17 @@
     background-color: theme("colors.container");
 }
 
+.navbarBlog {
+    @apply sticky top-0 z-50 flex flex-row w-full h-16 px-4 py-2 mb-4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04),
+    0 0 8px rgba(0, 0, 0, 0.04),
+    0 0 16px rgba(0, 0, 0, 0.04),
+    0 0 32px rgba(0, 0, 0, 0.04),
+    0 0 64px rgba(0, 0, 0, 0.04),
+    0 0 128px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+}
+
 .navbarContent {
     @apply w-full relative flex flex-row items-center;
 }
@@ -39,9 +50,16 @@
     @apply absolute w-full h-0.5 -bottom-0.5 left-0;
     content: "";
     transform: scaleX(0);
-    background-color: theme("textColor");
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+}
+
+.navbarItemLight::after {
+    background-color: theme("colors.textLightMode");
+}
+
+.navbarItemDark::after {
+    background-color: theme("textColor");
 }
 
 .navbarItem:hover::after {
