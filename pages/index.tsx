@@ -20,7 +20,7 @@ export default function Home() {
             <Head>
                 <title>Kevin Messali | Student & Aspiring Entrepreneur</title>
             </Head>
-            <Navbar />
+            <Navbar isBlog={false} />
             <main className={styles.content}>
                 <LeftContactBar />
                 <section className={`${styles.introSection} border-b`} id={"intro-hero"}>

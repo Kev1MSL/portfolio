@@ -148,7 +148,7 @@ export default function Project() {
             <Head>
                 <title>Projects | Kevin Messali</title>
             </Head>
-            <Navbar />
+            <Navbar isBlog={false} />
             <main className={styles.content}>
                 <LeftContactBar />
                 <div className={styles.pageContainer}></div>
