@@ -1,0 +1,16 @@
+.container {
+    @apply mt-24;
+}
+
+.presentation {
+    @apply flex flex-col items-center justify-center;
+}
+
+.description {
+    @apply text-base md:text-xl font-medium mt-10;
+    color: theme("colors.textParagraphLightMode");
+}
+
+.title {
+    @apply font-display text-6xl font-bold font-extra-bold w-full;
+}

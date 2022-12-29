@@ -1,0 +1,58 @@
+.container {
+    @apply rounded-3xl p-3 w-[35rem] shadow-2xl;
+    background-color: white;
+}
+
+.imageContainer {
+    @apply rounded-xl overflow-hidden;
+}
+
+.imageContainer img {
+    @apply rounded-xl transform transition duration-500 ease-in-out hover:scale-105 cursor-pointer;
+}
+
+
+.title {
+    @apply text-2xl font-bold cursor-pointer transform transition duration-500 ease-in-out;;
+}
+
+.postInfo {
+    @apply flex flex-row items-center justify-between mt-3 mx-2;
+}
+
+.title:hover {
+    @apply transform transition duration-500 ease-in-out;
+    color: theme("colors.primaryHover");
+}
+
+.date {
+    @apply text-xs flex flex-row items-center gap-1;
+    color: theme("colors.disabled");
+}
+
+.dateIcon {
+    @apply w-4 h-4;
+}
+
+.description {
+    @apply mt-3 mx-2 text-sm;
+    color: theme("colors.textParagraphLightMode");
+}
+
+.tagList {
+    @apply flex flex-row items-center gap-2 my-4 mx-2;
+}
+
+.tagIcon {
+    @apply w-4 h-4;
+}
+
+.tag {
+    @apply flex flex-row items-center text-sm cursor-pointer transform transition duration-300 ease-in-out font-medium;
+    color: theme("colors.primary");
+}
+
+.tag:hover {
+    @apply transform transition duration-300 ease-in-out;
+    color: theme("colors.primaryHover");
+}

@@ -8,14 +8,24 @@ import Head from "next/head";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import dynamic from "next/dynamic";
-import {useState} from "react";
 
 import styles from "../../styles/Blog/Blog.module.css";
+import IntroBlog from "../../components/Blog/IntroBlog";
+import FeaturedPost, {PostProps} from "../../components/Blog/FeaturedPost";
+import Post from "../../components/Blog/Post";
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false });
 
 export default function Blog() {
-    const [value, setValue] = useState<any>("**Hello world!!!**");
+    const featuredPost: PostProps = {
+        title: "My First Blog Post",
+        description: "This is my first blog post. I am excited to share my thoughts and experiences with you!",
+        image: "assets/blog/first-post.jpg",
+        date: "January 1, 2023",
+        tags: ["blog", "first post"],
+        isFeatured: true,
+    };
+    const posts: PostProps[] = [featuredPost, featuredPost, featuredPost, featuredPost];
     return (
         <div className={styles.container}>
             <style jsx global>{`
@@ -29,7 +39,18 @@ export default function Blog() {
             </Head>
             <Navbar isBlog={true} />
             <main className={styles.content}>
-                <div className={"text-center mt-10"}>Currently in development.</div>
+                <section className={styles.intro}>
+                    <IntroBlog />
+                    <FeaturedPost {...featuredPost} />
+                </section>
+                <section className={styles.allPosts}>
+                    <h5>All blog posts</h5>
+                    <div className={styles.allPostsContainer}>
+                        {posts.map((post, index) => (
+                            <Post {...post} key={index} />
+                        ))}
+                    </div>
+                </section>
             </main>
         </div>
     );

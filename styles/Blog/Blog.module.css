@@ -3,14 +3,26 @@
  *
  */
 
-/*.container {*/
-/*    background-color: #f3f3f0;*/
-/*    @apply min-h-screen;*/
-/*}*/
+main.content {
+    @apply w-full h-full flex flex-col items-center justify-center;
+}
 
-/*main.content {*/
-/*    color: #0d1117;*/
-/*}*/
+.intro {
+    @apply flex flex-row items-center justify-center gap-16 mb-16;
+}
+
+.allPosts {
+    @apply flex flex-col items-center justify-center mb-16;
+}
+
+.allPosts > h5 {
+    @apply text-2xl font-bold font-display mb-10;
+}
+
+.allPostsContainer {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10;
+}
+
 
 @media (prefers-color-scheme: dark) {
     .wmdeMarkdown,

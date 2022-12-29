@@ -1,0 +1,88 @@
+.container {
+    @apply rounded-2xl w-[35rem] shadow-xl h-full;
+    background-color: white;
+}
+
+.imageContainer {
+    @apply rounded-t-lg overflow-hidden relative cursor-pointer;
+}
+
+.imageContainer:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.imageContainer img {
+    @apply rounded-t-lg transform transition duration-300 ease-in-out;
+}
+
+.imageContainer:hover img {
+    @apply transform transition duration-300 ease-in-out;
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+
+.title {
+    @apply text-2xl font-bold cursor-pointer transform transition duration-500 ease-in-out;;
+}
+
+.postDetails {
+    @apply m-5;
+}
+
+.postInfo {
+    @apply flex flex-row items-center justify-between mt-3;
+}
+
+.title:hover {
+    @apply transform transition duration-500 ease-in-out;
+    color: theme("colors.primaryHover");
+}
+
+.date {
+    @apply text-xs flex flex-row items-center gap-1;
+    color: theme("colors.disabled");
+}
+
+.dateIcon {
+    @apply w-4 h-4;
+}
+
+.description {
+    @apply mt-3 text-sm;
+    color: theme("colors.textParagraphLightMode");
+}
+
+.tagList {
+    @apply flex flex-row items-center gap-2 mx-4 my-4 absolute bottom-0 z-10;
+}
+
+.tag {
+    @apply text-sm cursor-pointer transform transition duration-300 ease-in-out font-medium flex flex-row items-center;
+    color: theme("colors.primary");
+}
+
+.tag:hover {
+    @apply transform transition duration-300 ease-in-out;
+    color: theme("colors.primaryHover");
+}
+
+.tagIcon {
+    @apply w-4 h-4 mr-1;
+}
+
+.badge {
+    background: theme("colors.secondary");
+    color: white;
+}
+
+.badge > span {
+    @apply text-sm font-normal flex flex-row items-center;
+}
