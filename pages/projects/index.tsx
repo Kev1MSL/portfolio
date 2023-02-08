@@ -76,6 +76,17 @@ export default function Project() {
         {
             isFeatured: false,
             info: {
+                title: "BX+ - The app for the bachelor students",
+                type: ProjectType.School,
+                description: "Centralize all the academic tools and social features into a single mobile application for the bachelor students.",
+                image: "assets/projects/bxplus.png",
+                techStack: ["Flutter", "Node.JS", "MangoDB", "REST API"],
+                links: { website: "http://bxplus.co/" },
+            },
+	    },
+        {
+            isFeatured: false,
+            info: {
                 title: "MIZIX - Serenity Car",
                 type: ProjectType.StartUp,
                 description:
