@@ -24,7 +24,7 @@
 }
 
 .textContainer {
-    @apply flex flex-col justify-evenly;
+    @apply flex flex-col;
 }
 
 .myMissionDescription {
