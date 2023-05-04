@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+main.content {
+	color: theme(textColor.textParagraph);
+	background-color: theme(backgroundColor.background);
+	@apply w-full h-full flex flex-col
+		items-center justify-center;
+}
+
+.introSection {
+	@apply container flex flex-col items-center h-full min-h-screen pb-20;
+}
+
+.section {
+	@apply container flex flex-col items-center mb-28 px-10;
+}

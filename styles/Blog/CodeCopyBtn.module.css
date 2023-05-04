@@ -1,0 +1,11 @@
+.codeCopyBtn {
+	@apply text-white absolute right-3 top-2 text-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-110 hover:opacity-90;
+}
+
+.tooltip {
+	@apply rounded-lg font-sans;
+}
+
+.tooltipColorOk {
+	color: #bfe29c;
+}

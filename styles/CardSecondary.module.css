@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+.container {
+    @apply rounded-xl p-5 border-[3px];
+    border-color: theme("colors.border");
+
+}
+
+.content {
+    @apply w-full h-full;
+}

@@ -1,0 +1,208 @@
+.page {
+	@apply bg-white text-gray-800;
+}
+
+.pageHeader {
+	@apply relative;
+}
+
+.pageIconContainer {
+	@apply absolute bottom-0 left-1/2 -translate-x-1/2;
+}
+
+.pageIcon {
+	@apply bg-slate-100 rounded-full translate-y-1/2 p-1.5 drop-shadow-lg;
+}
+
+.pageIconEmoji {
+	@apply text-[3.2rem] w-[5.7rem] h-[5.7rem] bg-slate-100 rounded-full absolute bottom-0 -translate-x-1/2 translate-y-1/2 flex justify-center items-center drop-shadow-lg;
+}
+
+.coverContainer {
+	@apply h-52 relative;
+}
+
+.cover {
+	@apply h-full w-full object-cover;
+}
+
+.breadcrumb {
+	box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+	@apply text-gray-200 text-sm flex gap-2 fixed top-2 left-2 z-10 bg-purple-700 px-3 py-1 rounded-xl items-center;
+}
+
+.breadcrumbHome {
+	@apply flex hover:bg-gray-100 hover:bg-opacity-20 rounded-md p-1 transition duration-300 ease-in-out;
+}
+
+.postContainer {
+	@apply max-w-4xl mx-auto mt-10;
+}
+
+.postContent {
+	@apply prose lg:prose-lg;
+}
+
+.postTitle {
+	@apply text-5xl font-extrabold text-center mt-16;
+}
+
+.postDescription {
+	@apply text-2xl text-center mt-5 font-medium text-gray-600;
+}
+
+.tagContainer {
+	@apply flex justify-center gap-4 my-4;
+}
+
+.tag {
+	@apply px-3 py-1 text-sm font-medium bg-purple-200 rounded-full text-purple-900;
+}
+
+.publishedDateReadingTime {
+	@apply text-gray-500 text-sm flex justify-center gap-5;
+}
+
+.publishedDateReadingTimeItems {
+	@apply flex gap-1;
+}
+
+.author {
+	@apply font-medium text-center mt-2 mb-10 text-gray-700;
+}
+
+.taskListContainer {
+	@apply list-none;
+}
+
+.inlinedCode {
+	@apply bg-gray-800 rounded-lg p-2 text-gray-100 font-medium;
+	font-family: "Fira Code", monospace;
+}
+
+.inlinedCode::before {
+	content: none;
+}
+
+.inlinedCode::after {
+	content: none;
+}
+
+.preContainer {
+	@apply relative;
+}
+
+.callout {
+	@apply rounded-lg p-4 flex items-center;
+}
+
+.callout > .preIcon {
+	@apply my-2 ml-2 mr-5;
+}
+
+.default,
+.default a {
+	@apply text-gray-800 border-gray-200 border-2;
+}
+
+.default a:hover {
+	@apply text-gray-950;
+}
+
+.gray,
+.gray a {
+	@apply bg-gray-100 text-gray-800;
+}
+
+.gray a:hover {
+	@apply text-gray-950;
+}
+
+.brown,
+.brown a {
+	@apply bg-amber-500 text-yellow-800 bg-opacity-50;
+}
+
+.brown a:hover {
+	@apply text-yellow-950;
+}
+
+.orange,
+.orange a {
+	@apply bg-orange-100 text-orange-800;
+}
+
+.orange a:hover {
+	@apply text-orange-950;
+}
+
+.yellow,
+.yellow a {
+	@apply bg-yellow-100 text-yellow-800;
+}
+
+.yellow a:hover {
+	@apply text-yellow-900;
+}
+
+.green,
+.green a {
+	@apply bg-green-100 text-green-800;
+}
+
+.green a:hover {
+	@apply text-green-950;
+}
+
+.blue,
+.blue a {
+	@apply bg-sky-100 text-sky-800;
+}
+
+.blue a:hover {
+	@apply text-sky-950;
+}
+
+.purple,
+.purple a {
+	@apply bg-purple-100 text-purple-800;
+}
+
+.purple a:hover {
+	@apply text-purple-950;
+}
+
+.pink,
+.pink a {
+	@apply bg-pink-100 text-pink-800;
+}
+
+.pink a:hover {
+	@apply text-pink-950;
+}
+
+.red,
+.red a {
+	@apply bg-red-100 text-red-800;
+}
+
+.red a:hover {
+	@apply text-red-950;
+}
+
+.heading1 {
+	@apply text-4xl font-extrabold;
+}
+
+.heading2 {
+	@apply text-3xl font-bold;
+}
+
+.heading3 {
+	@apply text-2xl font-bold;
+}
+
+.link {
+	text-decoration: underline 0.15em;
+	@apply text-purple-700 hover:text-purple-900 underline-offset-4 hover:underline-offset-8 duration-300 ease-in-out;
+}

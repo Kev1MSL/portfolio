@@ -1,0 +1,60 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+.contentContainer {
+    @apply container flex flex-col items-center;
+}
+
+.title {
+    @apply text-4xl md:text-5xl font-bold mt-10 font-display relative;
+}
+
+.content {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 justify-items-center;
+}
+
+.pictureContainer {
+    @apply w-2/3 md:w-2/5 md:h-2/5;
+}
+
+.picture {
+    @apply rounded-xl shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out;
+}
+
+.textContainer {
+    @apply flex flex-col;
+}
+
+.myMissionDescription {
+    @apply mt-4;
+}
+
+.myMissionContainer {
+    @apply mt-5;
+}
+
+.myMission {
+    @apply text-2xl md:text-3xl font-bold font-display text-center;
+}
+
+.missionKeyword {
+    @apply font-extrabold;
+    color: theme("colors.textAccentSecondary");
+}
+
+.description {
+}
+
+.title::before {
+    @apply h-2.5 md:h-3.5 -bottom-3 md:-bottom-5 w-[12rem] md:w-[13rem];
+    content: "";
+    position: absolute;
+    left: 35%;
+
+    transform: skew(-12deg) translateX(-50%);
+    background: theme("colors.secondary");
+    opacity: 70%;
+    z-index: -1;
+}

@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,17 +9,41 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.17",
+    "@notionhq/client": "^2.2.4",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "autoprefixer": "10.4.14",
+    "dayjs": "^1.11.7",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
+    "medium-zoom": "^1.0.8",
     "next": "13.3.4",
+    "notion-to-md": "^2.5.6",
+    "nprogress": "^0.2.0",
     "postcss": "8.4.23",
     "react": "18.2.0",
+    "react-animate-height": "^3.1.1",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-scroll": "^1.8.9",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-tooltip": "^5.11.1",
+    "reading-time": "^1.5.0",
+    "rehype-katex": "^6.0.3",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "remark-mdx": "^2.3.0",
+    "remark-unwrap-images": "^3.0.1",
+    "sharp": "^0.32.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/nprogress": "^0.2.0",
+    "@types/react-scroll": "^1.8.7",
+    "@types/react-syntax-highlighter": "^15.5.6"
   }
 }

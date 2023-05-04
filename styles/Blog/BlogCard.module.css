@@ -1,0 +1,35 @@
+.container {
+	@apply rounded-xl shadow-lg overflow-hidden h-[21rem] bg-gray-50 relative;
+}
+
+.postContent {
+	@apply flex-1 pt-2 pb-6 px-4 flex flex-col justify-between;
+}
+
+.coverImage {
+	@apply object-cover w-full h-40;
+}
+
+.postDescription {
+	@apply text-sm text-gray-600 text-ellipsis line-clamp-2;
+}
+
+.postTitle {
+	@apply text-xl font-medium text-gray-900;
+}
+
+.publishedDate {
+	@apply text-xs font-medium text-gray-600;
+}
+
+.element {
+	@apply mt-2;
+}
+
+.tagContainer {
+	@apply space-x-3 absolute bottom-4;
+}
+
+.tag {
+	@apply px-3 py-1 text-xs bg-purple-200 rounded-full text-purple-900;
+}

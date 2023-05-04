@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+.container {
+    @apply rounded-xl shadow-2xl p-5;
+    background-color: theme("colors.container");
+}
+
+.content {
+    @apply w-full h-full;
+}

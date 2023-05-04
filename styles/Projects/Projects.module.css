@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2022. Kevin Messali, all rights reserved.
+ *
+ */
+
+main.content {
+	@apply w-full h-full flex flex-col items-center justify-center mb-28;
+	color: theme(textColor.textDarkMode);
+	background-color: theme(backgroundColor.background);
+}
+
+.title {
+	@apply text-4xl md:text-5xl font-bold font-display text-center;
+}
+
+.pageContainer {
+	@apply container flex flex-col items-center mt-10 px-10;
+}
+
+.projectsContainer {
+	@apply grid grid-cols-1 md:grid-cols-1 2xl:grid-cols-2 gap-10 mt-14 justify-items-center mx-10;
+}
+
+.projectContainer {
+	@apply w-full lg:w-[39rem] xl:w-[42rem] hover:-translate-y-2 transition-all duration-300 ease-in-out;
+}
+
+.project {
+	@apply flex flex-row items-center justify-center relative;
+}
+
+.pill {
+	@apply absolute top-0 right-0;
+}
+
+.projectImageContainer {
+	@apply h-full w-24 xl:w-48 min-w-[10rem] hidden lg:block;
+}
+
+.projectImage {
+	@apply rounded-xl w-full xl:w-3/4;
+}
+
+.projectContent {
+	@apply flex flex-col justify-between py-5 mx-auto px-5;
+}
+
+.projectTitle {
+	@apply text-2xl font-bold font-display text-center mt-4;
+}
+
+.projectDescription {
+	@apply text-center mt-4;
+}
+
+.techStackContainer {
+	@apply flex flex-row items-center justify-center gap-2 mt-6;
+}
+
+.projectTechStack {
+	@apply grid grid-cols-2 md:flex md:flex-row items-center justify-center gap-2 font-medium;
+}
+
+.projectTechStackItem {
+	@apply px-3 py-2 rounded-lg;
+	background-color: theme("colors.container");
+}
+
+.projectLinks {
+	@apply flex flex-row justify-center gap-4 mt-5;
+}
+
+.projectLink {
+	@apply transition-all duration-300 ease-in-out;
+}
+
+.projectLink:hover {
+	@apply transition-all duration-300 ease-in-out;
+	color: theme("colors.textAccent");
+}
+
+.imageIcon {
+	@apply w-5/6 h-5/6 mx-auto;
+}

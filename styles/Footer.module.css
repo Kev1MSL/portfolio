@@ -1,0 +1,13 @@
+.portfolio {
+	color: theme(colors.textDarkMode);
+	@apply mb-5;
+}
+
+.blog {
+	color: theme(colors.textLightMode);
+	@apply h-10;
+}
+
+.copyrightContentBlog {
+	@apply mb-5;
+}
