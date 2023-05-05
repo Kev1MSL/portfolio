@@ -68,7 +68,7 @@ const Blog: NextPage = ({
 				<section className={styles.allPostContainer}>
 					<h3 className="text-2xl font-semibold text-gray-800">All Posts</h3>
 					<div className="border-t-2 border-gray-500">
-						{posts.length > 1 ? (
+						{posts.length > 0 ? (
 							<div className={styles.blogPost}>
 								{posts.map((post: Post) => (
 									<BlogCard key={post.id} post={post} />
