@@ -1,5 +1,6 @@
 .page {
-	@apply bg-white text-gray-800;
+	background-color: #f5f5f5;
+	@apply text-gray-800 mt-24 mb-10 min-h-[calc(100vh-15rem)] border-b border-gray-200;
 }
 
 .pageHeader {
@@ -40,7 +41,7 @@
 }
 
 .postContent {
-	@apply prose lg:prose-lg;
+	@apply prose lg:prose-lg mb-10;
 }
 
 .postTitle {

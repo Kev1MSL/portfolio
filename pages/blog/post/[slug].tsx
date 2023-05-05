@@ -27,6 +27,7 @@ import "react-tooltip/dist/react-tooltip.css";
 
 import { CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
 import { HomeIcon } from "@heroicons/react/24/outline";
+import Footer from "@/components/Footer";
 
 dayjs.extend(localizedFormat);
 
@@ -112,7 +113,7 @@ const Post = ({
 					content={postInfo.coverImage}
 				/>
 			</Head>
-			<main className={`min-h-screen ${inter.className} ${styles.page}`}>
+			<main className={`${inter.className} ${styles.page}`}>
 				<div className={styles.pageHeader}>
 					<div className={styles.breadcrumb}>
 						<Link href={"/blog/"} className={styles.breadcrumbHome}>
@@ -401,6 +402,7 @@ const Post = ({
 					</div>
 				</div>
 			</main>
+			<Footer isBlog={true} className={inter.className} />
 		</>
 	);
 };
