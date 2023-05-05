@@ -7,11 +7,15 @@ import React from "react";
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import PrimaryButton from "./Buttons/PrimaryButton";
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 
-export default function Navbar({ isBlog = false }: { isBlog: boolean }) {
+export default function Navbar({
+	isBlog = false,
+	className = "",
+}: {
+	isBlog: boolean;
+	className?: string;
+}) {
 	const router = useRouter();
 
 	function isActive(path: string) {
@@ -19,7 +23,9 @@ export default function Navbar({ isBlog = false }: { isBlog: boolean }) {
 	}
 
 	return (
-		<nav className={`${isBlog ? styles.navbarBlog : styles.navbar}`}>
+		<nav
+			className={`${isBlog ? styles.navbarBlog : styles.navbar} ${className}`}
+		>
 			<div className={styles.navbarLogo}>
 				<Link href={"/"} className={styles.navbarLogoLink}>
 					<Image

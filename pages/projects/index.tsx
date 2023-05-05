@@ -32,7 +32,7 @@ export default function Project() {
 				title: "My personal website",
 				description:
 					"Portfolio & blog website fully built from scratch and powered with Next.js.",
-				image: "logo/logo.png",
+				image: "/logo/logo.png",
 				techStack: ["Next.js", "TailwindCSS", ".NET Core", "TypeScript"],
 				type: ProjectType.Personal,
 				links: {
@@ -47,7 +47,7 @@ export default function Project() {
 				title: "Creofin survey",
 				description:
 					"Survey to collect feedback from farmers built with a scalable architecture and question dependencies. It is my first project using Next.js and TailwindCSS.",
-				image: "assets/featured_projects/creofin_survey.png",
+				image: "/assets/featured_projects/creofin_survey.png",
 				techStack: ["Next.js", "PostgreSQL", ".NET Core", "NextUI"],
 				type: ProjectType.StartUp,
 				links: {
@@ -63,7 +63,7 @@ export default function Project() {
 				type: ProjectType.School,
 				description:
 					"Final project for the object-oriented programming in C++ class. Functional cryptocurrency based on Proof of Stake.",
-				image: "assets/featured_projects/xcoin.png",
+				image: "/assets/featured_projects/xcoin.png",
 				techStack: ["C++", "QT", "gRPC", "CMake"],
 				links: {
 					github: "https://github.com/Kev1MSL/XCoin",
@@ -77,7 +77,7 @@ export default function Project() {
 				type: ProjectType.StartUp,
 				description:
 					"Payment solutions for farmers to buy agri inputs online at 0% interest rates/fees. We help to make the agricultural industry more digitalized.",
-				image: "assets/featured_projects/creofin.svg",
+				image: "/assets/featured_projects/creofin.svg",
 				techStack: ["Python", ".NET Core", "TypeScript", "REST API"],
 				links: { website: "https://www.creofin.com/" },
 			},
@@ -89,7 +89,7 @@ export default function Project() {
 				type: ProjectType.School,
 				description:
 					"Centralize all the academic tools and social features into a single mobile application for the bachelor students.",
-				image: "assets/projects/bxplus.png",
+				image: "/assets/projects/bxplus.png",
 				techStack: ["Flutter", "Node.JS", "MangoDB", "REST API"],
 				links: { website: "http://bxplus.co/" },
 			},
@@ -101,7 +101,7 @@ export default function Project() {
 				type: ProjectType.StartUp,
 				description:
 					"Automatic do not disturb mode when you are driving and other activities that requires you to be focused. Handles your calls by sending a customized messages to the callers. It also activates automatically when you start driving or enter a specific zone.",
-				image: "assets/projects/serenity_car.png",
+				image: "/assets/projects/serenity_car.png",
 				techStack: ["Java", "Android", "Google Play Services"],
 				links: {
 					website: "https://mizix.net/serenity-car/",
@@ -115,7 +115,7 @@ export default function Project() {
 				type: ProjectType.StartUp,
 				description:
 					"Smart and secure USB flash drive that you cannot forget on computers. Patented techonology combining a customized USB flashdrive, a smartphone app and a computer software.",
-				image: "assets/projects/nlost.png",
+				image: "/assets/projects/nlost.png",
 				techStack: ["Java", "C#", "WPF", "MSSQL", "Arduino"],
 				links: {
 					website: "https://mizix.net/nlost/",
@@ -129,7 +129,7 @@ export default function Project() {
 				type: ProjectType.Internship,
 				description:
 					"Developed a secure and efficient application to run on Intel SGX processor enclaves. It was my first glimpse on hardware security, and it is definitely a topic I would like to learn more.",
-				image: "assets/projects/sgx.jpg",
+				image: "/assets/projects/sgx.jpg",
 				techStack: ["C", "Intel SGX", "Hardware Security"],
 				links: {
 					website:
@@ -169,7 +169,7 @@ export default function Project() {
 			<Head>
 				<title>Projects | Kevin Messali</title>
 			</Head>
-			<Navbar isBlog={false} />
+			<Navbar isBlog={false} className={inter.className} />
 			<main className={`${styles.content} ${inter.className}`}>
 				<LeftContactBar />
 				<div className={styles.pageContainer}></div>
@@ -184,7 +184,7 @@ export default function Project() {
 					})}
 				</div>
 			</main>
-			<Footer isBlog={false} />
+			<Footer isBlog={false} className={inter.className} />
 		</>
 	);
 }

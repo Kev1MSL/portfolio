@@ -38,7 +38,7 @@ main.content {
 }
 
 .projectImage {
-	@apply rounded-xl w-full xl:w-3/4;
+	@apply rounded-xl w-full xl:w-3/4 mx-auto;
 }
 
 .projectContent {

@@ -4,10 +4,34 @@
  */
 
 main.content {
+	@apply mt-24 mb-10 min-h-[calc(100vh-15rem)];
+}
+
+.allPostContainer {
 	color: #0d1117;
-	@apply max-w-7xl mx-auto mb-10;
+	@apply max-w-7xl mx-auto mt-16;
+}
+
+.title {
+	@apply text-6xl font-extrabold;
+}
+
+.description {
+	@apply mt-8 text-xl text-gray-600 font-medium;
 }
 
 .blogPost {
-	@apply grid mt-12 max-w-lg mx-auto gap-6 xl:grid-cols-2 xl:max-w-none;
+	@apply grid mt-12 max-w-lg mx-auto gap-12 xl:grid-cols-2 xl:max-w-none;
+}
+
+.noPostContainer {
+	@apply flex flex-col items-center justify-center mt-40;
+}
+
+.noPostTitle {
+	@apply text-4xl font-extrabold;
+}
+
+.noPostDescription {
+	@apply mt-8 text-xl text-gray-600 font-medium;
 }

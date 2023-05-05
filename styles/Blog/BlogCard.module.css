@@ -1,13 +1,25 @@
 .container {
-	@apply rounded-xl shadow-lg overflow-hidden h-[21rem] bg-gray-50 relative;
+	@apply rounded-xl shadow-lg overflow-hidden min-h-[19rem] bg-gray-50 relative hover:shadow-2xl transition-shadow duration-300 ease-in-out;
+}
+
+.container:hover .coverImage {
+	@apply scale-110;
+}
+
+.container:hover .postTitle {
+	@apply text-purple-800;
 }
 
 .postContent {
-	@apply flex-1 pt-2 pb-6 px-4 flex flex-col justify-between;
+	@apply flex-1 pt-2 pb-14 px-4 flex flex-col justify-between;
 }
 
 .coverImage {
-	@apply object-cover w-full h-40;
+	@apply object-cover w-full h-40 transition duration-300 ease-in-out;
+}
+
+.postHeader {
+	@apply flex items-start;
 }
 
 .postDescription {
@@ -15,11 +27,15 @@
 }
 
 .postTitle {
-	@apply text-xl font-medium text-gray-900;
+	@apply text-xl font-semibold text-gray-900 transition-colors duration-300 ease-in-out max-w-md;
+}
+
+.publishedDateContainer {
+	@apply ml-auto flex items-center gap-1 text-gray-500;
 }
 
 .publishedDate {
-	@apply text-xs font-medium text-gray-600;
+	@apply text-xs font-medium;
 }
 
 .element {
@@ -27,9 +43,17 @@
 }
 
 .tagContainer {
-	@apply space-x-3 absolute bottom-4;
+	@apply absolute bottom-4 right-5 flex items-center gap-3;
 }
 
 .tag {
-	@apply px-3 py-1 text-xs bg-purple-200 rounded-full text-purple-900;
+	@apply px-3 py-1 text-xs font-medium bg-purple-200 rounded-full text-purple-900 h-7 inline-flex items-center;
+}
+
+.featuredTag {
+	@apply px-3 py-1 text-xs font-medium bg-sky-200 rounded-full text-sky-800 inline-flex items-center gap-1 h-7;
+}
+
+.calendarIcon {
+	@apply w-4 h-4;
 }

@@ -199,6 +199,7 @@ export default class NotionService {
 			slug: page.properties.Slug.formula.string,
 			icon: icon,
 			author: "",
+			isFeatured: page.properties.Featured.checkbox,
 		};
 	}
 }

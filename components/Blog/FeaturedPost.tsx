@@ -5,30 +5,27 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "../../styles/Blog/BlogCard.module.css";
+import styles from "../../styles/Blog/FeaturedPost.module.css";
 import { CalendarIcon, StarIcon } from "@heroicons/react/24/solid";
 
-type BlogCardProps = {
+type FeaturedPostProps = {
 	post: Post;
 };
 
 dayjs.extend(localizedFormat);
 
-const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
-	const tags: Tag[] = post.isFeatured
-		? [
-				{
-					id: "featured",
-					name: "Featured",
-				},
-				...post.tags,
-		  ]
-		: [...post.tags];
-
+const FeaturedPost: FunctionComponent<FeaturedPostProps> = ({ post }) => {
+	const tags: Tag[] = [
+		{
+			id: "featured",
+			name: "Featured",
+		},
+		...post.tags,
+	];
 	return (
 		<Link href={`/blog/post/${post.slug}`}>
 			<div className={styles.container}>
-				<div className="flex-shrink-0 overflow-hidden">
+				<div className={styles.coverImageContainer}>
 					<Image
 						src={post.coverImage}
 						width={500}
@@ -36,6 +33,24 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
 						alt="cover"
 						className={styles.coverImage}
 					/>
+					<div className={styles.tagContainer}>
+						{post.isFeatured &&
+							tags.map((tag) => {
+								if (tag.name === "Featured" && tag.id === "featured") {
+									return (
+										<span key={tag.id} className={styles.featuredTag}>
+											<StarIcon width={20} height={20} />
+											{tag.name}
+										</span>
+									);
+								}
+								return (
+									<span key={tag.id} className={styles.tag}>
+										#{tag.name}
+									</span>
+								);
+							})}
+					</div>
 				</div>
 				<div className={styles.postContent}>
 					<div className="flex-1">
@@ -55,23 +70,6 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
 						<div className={styles.element}>
 							<h4 className={styles.postDescription}>{post.description}</h4>
 						</div>
-						<div className={styles.tagContainer}>
-							{tags.map((tag) => {
-								if (tag.id === "featured" && tag.name === "Featured") {
-									return (
-										<span key={tag.id} className={styles.featuredTag}>
-											<StarIcon width={20} height={20} />
-											{tag.name}
-										</span>
-									);
-								}
-								return (
-									<span key={tag.id} className={styles.tag}>
-										#{tag.name}
-									</span>
-								);
-							})}
-						</div>
 					</div>
 				</div>
 			</div>
@@ -79,4 +77,4 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
 	);
 };
 
-export default BlogCard;
+export default FeaturedPost;

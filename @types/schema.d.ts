@@ -13,6 +13,7 @@ export type Post = {
 	description: string;
 	publishedDate: string;
 	author: string;
+	isFeatured: boolean;
 };
 
 export type PostPage = {

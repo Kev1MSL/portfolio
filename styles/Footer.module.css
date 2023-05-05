@@ -9,5 +9,5 @@
 }
 
 .copyrightContentBlog {
-	@apply mb-5;
+	@apply mb-5 text-gray-700;
 }

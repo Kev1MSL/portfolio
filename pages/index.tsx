@@ -25,7 +25,7 @@ export default function Home() {
 			<Head>
 				<title>Kevin Messali | Student & Aspiring Entrepreneur</title>
 			</Head>
-			<Navbar isBlog={false} />
+			<Navbar isBlog={false} className={inter.className} />
 			<main className={`${styles.content} ${inter.className}`}>
 				<LeftContactBar />
 				<section
@@ -47,7 +47,7 @@ export default function Home() {
 					<ExperiencesAndAchievements />
 				</section>
 			</main>
-			<Footer isBlog={false} />
+			<Footer isBlog={false} className={inter.className} />
 		</>
 	);
 }
