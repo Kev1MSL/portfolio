@@ -1,6 +1,6 @@
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
-import { Post, PostLink, PostPage } from "../@types/schema";
+import { Post, PostLink, PostPage } from "@/@types/schema";
 import { MdBlock } from "notion-to-md/build/types";
 
 /**
