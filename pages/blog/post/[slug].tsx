@@ -35,6 +35,7 @@ const inter = Inter({ subsets: ["latin-ext"] });
 const source_serif = Source_Serif_Pro({
 	subsets: ["latin"],
 	weight: ["400", "600"],
+	style: ["normal", "italic"],
 });
 
 export async function getStaticPaths() {
