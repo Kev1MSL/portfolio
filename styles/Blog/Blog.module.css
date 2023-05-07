@@ -4,7 +4,11 @@
  */
 
 main.content {
-	@apply mt-24 mb-10 min-h-[calc(100vh-15rem)];
+	@apply mt-16 lg:mt-24 mb-10 min-h-[calc(100vh-15rem)] px-10;
+}
+
+.intro {
+	@apply flex flex-col xl:flex-row w-full lg:w-5/6 mx-auto justify-around items-center gap-10;
 }
 
 .allPostContainer {
@@ -13,11 +17,11 @@ main.content {
 }
 
 .title {
-	@apply text-6xl font-extrabold;
+	@apply text-5xl lg:text-6xl font-extrabold;
 }
 
 .description {
-	@apply mt-8 text-xl text-gray-600 font-medium;
+	@apply mt-8 text-lg lg:text-xl text-gray-600 font-medium;
 }
 
 .blogPost {

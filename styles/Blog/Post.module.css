@@ -37,7 +37,7 @@
 }
 
 .postContainer {
-	@apply max-w-4xl mx-auto mt-10;
+	@apply max-w-4xl mx-auto mt-10 px-6 lg:px-0;
 }
 
 .postContent {
@@ -45,11 +45,11 @@
 }
 
 .postTitle {
-	@apply text-5xl font-extrabold text-center mt-16;
+	@apply text-4xl lg:text-5xl font-extrabold text-center mt-16;
 }
 
 .postDescription {
-	@apply text-2xl text-center mt-5 font-medium text-gray-600;
+	@apply text-xl lg:text-2xl text-center mt-5 font-medium text-gray-600;
 }
 
 .tagContainer {
@@ -77,7 +77,7 @@
 }
 
 .inlinedCode {
-	@apply bg-gray-800 rounded-lg px-2 py-1 text-gray-100 font-medium whitespace-nowrap text-sm;
+	@apply bg-gray-800 rounded-lg px-1.5 py-0.5 lg:px-2 lg:py-1 text-gray-100 font-medium whitespace-nowrap text-sm;
 	font-family: "Fira Code", monospace;
 }
 

@@ -50,7 +50,7 @@ const Blog: NextPage = ({
 			</Head>
 			<Navbar isBlog={true} className={inter.className} />
 			<main className={`${styles.content}`}>
-				<section className="flex w-5/6 mx-auto justify-around items-center">
+				<section className={styles.intro}>
 					<div>
 						<h1 className={styles.title}>Kevin&apos;s Blog</h1>
 						<p className={styles.description}>
