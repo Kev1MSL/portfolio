@@ -77,7 +77,7 @@
 }
 
 .inlinedCode {
-	@apply bg-gray-800 rounded-lg px-1.5 py-0.5 lg:px-2 lg:py-1 text-gray-100 font-medium whitespace-nowrap text-xs lg:text-sm;
+	@apply bg-gray-800 rounded-md lg:rounded-lg px-2 py-1 text-gray-100 font-medium whitespace-nowrap text-xs lg:text-sm;
 	font-family: "Fira Code", monospace;
 }
 
