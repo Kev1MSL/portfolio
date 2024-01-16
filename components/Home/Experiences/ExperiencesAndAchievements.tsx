@@ -9,6 +9,18 @@ import Experience, { ExperienceProps } from "./Experience";
 export default function ExperiencesAndAchievements() {
 	const experiences: ExperienceProps[] = [
 		{
+			title: "Entrepreneur in Residence - W23 Grad Cohort",
+			company: "Entrepreneur First",
+			location: "Paris / London",
+			locationSmall: "Paris / London",
+			date: "July 2023 - Today",
+			dateSmall: "July '23 - Today",
+			description: [
+				"Working on something new",
+
+			],
+		},
+		{
 			title: "Co-Founder & CTO",
 			company: "Creofin",
 			location: "Ghent, Belgium",
@@ -45,21 +57,6 @@ export default function ExperiencesAndAchievements() {
 			description: [
 				"Selected among 500+ students from top universities to participate to the challenge and was awarded $10k to launch a project.",
 				"Won the Fintech vertical at the Olam Ventures competition - Prize $25k.",
-			],
-		},
-		{
-			title: "National Vice Champion Microcompany",
-			company: "Entreprendre Pour Apprendre",
-			location: "Cannes, France",
-			locationSmall: "Cannes, FR",
-			date: "November 2017- June 2018",
-			dateSmall: "Nov '17 - Jun '18",
-			description: [
-				"Supervised a team of 6 people to build the pitch of the product as Sales Manager.",
-				"Assisted the development of the computer software and the mobile application.",
-				"Engineered the modification of the USB flash drive PCB.",
-				"Won with the team the regional championship.",
-				"Earned the vice-champion title at the national championship.",
 			],
 		},
 	];

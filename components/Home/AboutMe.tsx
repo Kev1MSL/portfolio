@@ -16,8 +16,8 @@ export default function AboutMe() {
 			<div className={styles.content}>
 				<div className={styles.textContainer}>
 					<p className={styles.description}>
-						Hi there! I am Kevin and I am currently a last-year bachelor student
-						majoring in Mathematics & Computer Science at l&apos;Ecole
+						Hi there! I am Kevin and I am currently a Founder in Residence at Entrepreneur First. 
+						I am also a Maths & Computer Science graduate from l&apos;Ecole
 						Polytechnique (the top engineering school in France). I am {age}{" "}
 						with French and Ukrainian origins. I was born in Paris, although I
 						have spent most of my youth in the French Riviera under the sun and

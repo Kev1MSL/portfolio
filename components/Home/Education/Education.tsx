@@ -24,8 +24,9 @@ export default function Education() {
             "Co-created the bachelor's blog (horizon.bxplus.co), co-developed the bachelor's app to track homeworks, school events, schedule, etc.",
     };
     const exchangeDetails: TimelineAdditionalDetailsProps = {
-        courses: "Probability, data mining, computer vision, strategic management and investment",
-    };
+			courses:
+				"Probabilistic methods and randomized computing, data mining, computer vision, strategic management and investment",
+		};
     return (
         <div className={styles.contentContainer}>
             <h2 className={styles.title}>My Education</h2>

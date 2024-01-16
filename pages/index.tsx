@@ -23,7 +23,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Kevin Messali | Student & Aspiring Entrepreneur</title>
+				<title>Kevin Messali | Aspiring Entrepreneur</title>
 			</Head>
 			<Navbar isBlog={false} className={inter.className} />
 			<main className={`${styles.content} ${inter.className}`}>
