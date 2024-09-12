@@ -134,7 +134,7 @@ export default class NotionService {
 		const page = response.results[0];
 		const mdBlocks: MdBlock[] = await this.notion2md.pageToMarkdown(page.id);
 		//console.log(mdBlocks);
-		content = this.notion2md.toMarkdownString(mdBlocks);
+		content = this.notion2md.toMarkdownString(mdBlocks).toString();
 		//console.log(content);
 
 		const authors: string[] = await Promise.all(
