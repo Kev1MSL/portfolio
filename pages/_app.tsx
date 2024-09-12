@@ -8,12 +8,12 @@ import "react-tooltip/dist/react-tooltip.css";
 NProgress.configure({ showSpinner: false });
 
 Router.events.on("routeChangeStart", (url) => {
-  NProgress.start();
+	NProgress.start();
 });
 
 Router.events.on("routeChangeComplete", (url) => {
-  NProgress.done(false);
+	NProgress.done(false);
 });
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+	return <Component {...pageProps} />;
 }

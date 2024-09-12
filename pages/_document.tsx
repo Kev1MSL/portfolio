@@ -4,6 +4,7 @@
  */
 
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Document, {
 	Html,
 	Head,
@@ -54,6 +55,7 @@ class PortfolioDocument extends Document {
 				<body className={`flex flex-col min-h-screen`}>
 					<Main />
 					<NextScript />
+					<Analytics />
 				</body>
 			</Html>
 		);

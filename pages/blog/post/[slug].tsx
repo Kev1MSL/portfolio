@@ -1,5 +1,5 @@
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
-import { Post, PostPage } from "../../../@types/schema";
+import { Post as PostType, PostPage } from "../../../@types/schema";
 import NotionService from "../../../services/notion-service";
 import Head from "next/head";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
@@ -22,7 +22,7 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import readingTime from "reading-time";
-import { Inter, Source_Serif_Pro } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "react-tooltip/dist/react-tooltip.css";
 
 import { CalendarIcon, ClockIcon } from "@heroicons/react/24/solid";
@@ -32,7 +32,7 @@ import Footer from "@/components/Footer";
 dayjs.extend(localizedFormat);
 
 const inter = Inter({ subsets: ["latin-ext"] });
-const source_serif = Source_Serif_Pro({
+const source_serif = Source_Serif_4({
 	subsets: ["latin"],
 	weight: ["400", "600"],
 	style: ["normal", "italic"],
@@ -40,9 +40,9 @@ const source_serif = Source_Serif_Pro({
 
 export async function getStaticPaths() {
 	const notionService = new NotionService();
-	const posts: Post[] = await notionService.getPublishedPosts();
+	const posts: PostType[] = await notionService.getPublishedPosts();
 
-	const paths: string[] = posts.map((post: Post) => {
+	const paths: string[] = posts.map((post: PostType) => {
 		return `/blog/post/${post.slug}`;
 	});
 
