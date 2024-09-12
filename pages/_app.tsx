@@ -4,6 +4,7 @@ import { Router } from "next/router";
 import NProgress from "nprogress";
 import "../styles/nprogress.css";
 import "react-tooltip/dist/react-tooltip.css";
+import { Analytics } from "@vercel/analytics/react";
 
 NProgress.configure({ showSpinner: false });
 
@@ -15,5 +16,10 @@ Router.events.on("routeChangeComplete", (url) => {
 	NProgress.done(false);
 });
 export default function App({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	return (
+		<>
+			<Component {...pageProps} />;
+			<Analytics mode={"production"} />;
+		</>
+	);
 }
