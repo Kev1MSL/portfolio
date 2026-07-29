@@ -3,42 +3,36 @@ module.exports = {
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
 		extend: {
-			backgroundColor: "#202040",
-			textColor: "#f3f3ff",
 			fontFamily: {
-				display: ["Satoshi-Variable", "sans-serif"],
+				display: [
+					"var(--font-display)",
+					"ui-sans-serif",
+					"system-ui",
+					"sans-serif",
+				],
+				sans: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
+				mono: [
+					"var(--font-mono)",
+					"ui-monospace",
+					"SFMono-Regular",
+					"Menlo",
+					"monospace",
+				],
 			},
 			colors: {
-				transparent: "transparent",
-				primary: "#B030B0",
-				primaryHover: "#8B008B",
-				secondary: "#602080",
-				container: "#272775",
-				containerSecondary: "#202060",
-				background: "#202040",
-				textAccent: "#84ebff",
-				textAccentSecondary: "#f3a6ff",
-				textParagraph: "#dfdfe8",
-				textButtonRipple: "#4199c9",
-				border: "#5656a6",
-				textLightMode: "#0d1117",
-				textDarkMode: "#f3f3ff",
-				backgroundLightMode: "#fcfcf0",
+				// The drafting sheet.
+				paper: "#FBFAF7",
+				desk: "#F1EFE9",
+				ink: "#1A1A18",
+				lead: "#6B6B62",
+				rule: "#DDDCD3",
+				signal: "#E8502A", // graphic marks only — grid, markers, badges
+				signalInk: "#B83A15", // text links and hover; ~5.5:1 on paper
 			},
-			typography: ({ theme }) => ({
-				DEFAULT: {
-					css: [
-						{
-							"--tw-prose-pre-bg": "rgb(40, 44, 52)",
-						},
-					],
-				},
-			}),
 		},
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [],
 };

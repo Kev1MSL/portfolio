@@ -1,23 +1,93 @@
-@import url("satoshi.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	/* Millimetre paper: a fine line every module, a bold one every five. */
+	--grid-fine: rgba(232, 80, 42, 0.018);
+	--grid-bold: rgba(232, 80, 42, 0.045);
+}
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	background-color: theme("colors.background");
-	/* color: theme("textColor.textLightMode"); */
+	background-color: theme("colors.desk");
+	color: theme("colors.ink");
+	/* The font variables are defined on the app wrapper, not here — this is only
+	   the pre-hydration fallback. */
+	font-family: ui-sans-serif, system-ui, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * The sheet. The grid is anchored to the sheet's border box, not its padding
+ * box, so the 1px `border-x` does not shift the pattern off the module. Get
+ * this wrong and the sheet's inner width goes odd, the centred 880px column
+ * lands on an odd offset, and every vertical edge on the page sits 1px off a
+ * grid line — visible the moment a photo edge runs alongside one.
+ *
+ * Horizontally the grid is structural: at >=1122px the column edges land on
+ * bold lines exactly. Vertically it is texture, not structure — the line
+ * heights are not multiples of 8, so rules and images drift a few px off.
+ */
+.sheet {
+	background-origin: border-box;
+	background-color: theme("colors.paper");
+	background-image: linear-gradient(
+			to right,
+			var(--grid-bold) 1px,
+			transparent 1px
+		), linear-gradient(to bottom, var(--grid-bold) 1px, transparent 1px),
+		linear-gradient(to right, var(--grid-fine) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--grid-fine) 1px, transparent 1px);
+	background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+	background-position: 0 0;
+}
+
+/* Expanded grotesque, set tight. Headings only. */
+.display {
+	font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+	font-variation-settings: "wdth" 118;
+	letter-spacing: -0.02em;
+}
+
+:focus-visible {
+	outline: 2px solid theme("colors.signal");
+	outline-offset: 2px;
+	border-radius: 1px;
 }
 
 ::-moz-selection {
-	/* Code for Firefox */
-	background: rgba(41, 233, 255, 0.3);
+	background: rgba(232, 80, 42, 0.16);
 }
 
 ::selection {
-	background: rgba(41, 233, 255, 0.3);
+	background: rgba(232, 80, 42, 0.16);
+}
+
+/* Register rows carry their own +/- marker. */
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }

@@ -28,11 +28,39 @@ class PortfolioDocument extends Document {
 					<meta content={"Kevin Messali"} name={"author"} />
 					<meta
 						content={
-							"Welcome on my website! Here you will find my portfolio with all my experiences and my blog."
+							"I've shipped something every year since I was 16. Patents, a blockchain from scratch, a fintech for farmers, and now Ted, an AI friend people talk to every day."
 						}
 						name={"description"}
 					/>
-					<meta content={"Kevin Messali, portfolio, blog"} name={"keywords"} />
+					<meta
+						content={"Kevin Messali, portfolio, engineer, founder"}
+						name={"keywords"}
+					/>
+
+					<meta property="og:type" content="website" />
+					<meta property="og:site_name" content="Kevin Messali" />
+					<meta property="og:title" content="Kevin Messali" />
+					<meta
+						property="og:description"
+						content="I've shipped something every year since I was 16. Patents, a blockchain from scratch, a fintech for farmers, and now Ted, an AI friend people talk to every day."
+					/>
+					<meta
+						property="og:image"
+						content="https://www.kevinmessali.com/api/og"
+					/>
+					<meta property="og:image:width" content="1200" />
+					<meta property="og:image:height" content="630" />
+					<meta name="twitter:card" content="summary_large_image" />
+					<meta name="twitter:creator" content="@Kev1MSL" />
+					<meta name="twitter:title" content="Kevin Messali" />
+					<meta
+						name="twitter:description"
+						content="I've shipped something every year since I was 16."
+					/>
+					<meta
+						name="twitter:image"
+						content="https://www.kevinmessali.com/api/og"
+					/>
 					<link
 						rel="apple-touch-icon"
 						sizes="180x180"
