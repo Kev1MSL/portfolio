@@ -11,6 +11,13 @@ import Document, {
 	NextScript,
 	DocumentContext,
 } from "next/document";
+import {
+	OG_IMAGE,
+	OG_IMAGE_ALT,
+	SITE_DESCRIPTION,
+	SITE_NAME,
+	SITE_URL,
+} from "@/lib/site";
 
 class PortfolioDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -25,42 +32,29 @@ class PortfolioDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<meta content={"Kevin Messali"} name={"author"} />
-					<meta
-						content={
-							"I've shipped something every year since I was 16. Patents, a blockchain from scratch, a fintech for farmers, and now Ted, an AI friend people talk to every day."
-						}
-						name={"description"}
-					/>
-					<meta
-						content={"Kevin Messali, portfolio, engineer, founder"}
-						name={"keywords"}
-					/>
+					{/* Every string below comes from lib/site.ts. Do not inline copy
+					    here — that is how the old headline survived on every shared
+					    link for months after it was cut from the page. */}
+					<meta name="author" content={SITE_NAME} />
+					<meta name="description" content={SITE_DESCRIPTION} />
+					<meta name="theme-color" content="#FBFAF7" />
 
 					<meta property="og:type" content="website" />
-					<meta property="og:site_name" content="Kevin Messali" />
-					<meta property="og:title" content="Kevin Messali" />
-					<meta
-						property="og:description"
-						content="I've shipped something every year since I was 16. Patents, a blockchain from scratch, a fintech for farmers, and now Ted, an AI friend people talk to every day."
-					/>
-					<meta
-						property="og:image"
-						content="https://www.kevinmessali.com/api/og"
-					/>
+					<meta property="og:site_name" content={SITE_NAME} />
+					<meta property="og:title" content={SITE_NAME} />
+					<meta property="og:description" content={SITE_DESCRIPTION} />
+					<meta property="og:url" content={SITE_URL} />
+					<meta property="og:locale" content="en_US" />
+					<meta property="og:image" content={OG_IMAGE} />
 					<meta property="og:image:width" content="1200" />
 					<meta property="og:image:height" content="630" />
+					<meta property="og:image:alt" content={OG_IMAGE_ALT} />
 					<meta name="twitter:card" content="summary_large_image" />
 					<meta name="twitter:creator" content="@Kev1MSL" />
-					<meta name="twitter:title" content="Kevin Messali" />
-					<meta
-						name="twitter:description"
-						content="I've shipped something every year since I was 16."
-					/>
-					<meta
-						name="twitter:image"
-						content="https://www.kevinmessali.com/api/og"
-					/>
+					<meta name="twitter:title" content={SITE_NAME} />
+					<meta name="twitter:description" content={SITE_DESCRIPTION} />
+					<meta name="twitter:image" content={OG_IMAGE} />
+					<meta name="twitter:image:alt" content={OG_IMAGE_ALT} />
 					<link
 						rel="apple-touch-icon"
 						sizes="180x180"

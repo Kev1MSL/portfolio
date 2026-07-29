@@ -232,7 +232,7 @@ export const register: RegisterEntry[] = [
     // The tag carries the name, the sentence carries what it was. This is
     // where the reader meets MIZIX first, so NLost's bare tag reads fine later.
     headline:
-      "Your phone notices you have started driving and deals with your calls so you do not have to. The first company I registered, at 16.",
+      "My first Android app: it works out when you have started driving and puts your phone on do not disturb without being asked. It shipped under MIZIX, the first company I registered, at 16.",
   },
   {
     id: "nlost",

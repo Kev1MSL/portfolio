@@ -4,12 +4,14 @@ import React from "react";
 import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 import Register from "@/components/register/Register";
+import { SITE_URL } from "@/lib/site";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Kevin Messali</title>
+        <link rel="canonical" href={SITE_URL} />
       </Head>
       <SiteNav />
       <main className="mx-auto w-full min-w-0 max-w-[880px] flex-1 px-6 sm:px-10">
