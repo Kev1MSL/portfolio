@@ -108,7 +108,7 @@ export const register: RegisterEntry[] = [
     live: true,
     big: true,
     headline: "A plush bear you can actually have a conversation with.",
-    body: "Real-time voice, a 3D character that reacts while you talk, and a memory that gets to know you. I work on all of it: the inference backend, the voice pipeline, the app, the bear. It reached the top 50 in Entertainment on the French App Store.",
+    body: "Real-time voice, a 3D character that reacts while you talk, and a memory that gets to know you. It reached the top 50 in Entertainment on the French App Store.",
     stack: ["Python", "FastAPI", "LiveKit", "React Native", "three.js"],
     links: [
       { label: "App Store", href: APP_STORE },
